@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change-Color</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="green" onclick="green()">Green</button>
+    <button id="blue" onclick="blue()">Blue</button>
+    <hr>
+    <div id="div1"></div>
+    <br><br>
+    <div id="div2"></div>
+</body>
+<script>
+    function green(){
+        let div1 = document.getElementById('div1');
+        div1.style.backgroundColor = "green";
+    }
+    function blue(){
+        let div1 = document.getElementById('div2');
+        div1.style.backgroundColor = "blue";
+    }
+</script>
+</html>

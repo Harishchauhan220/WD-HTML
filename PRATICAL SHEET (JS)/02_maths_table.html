@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Table Generator</title>
+    <style>
+        *{
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function generateTable() {
+            var number = document.getElementById("number").value;
+            var table = document.getElementById("table");
+
+            // Clear previous table
+            table.innerHTML = "";
+
+            // Generate math table
+            for (var i = 1; i <= 10; i++) {
+                var result = number * i;
+                var row = "<tr><td>" + number + " x " + i + "</td><td>=</td><td>" + result + "</td></tr>";
+                table.innerHTML += row;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Math Table Generator</h2>
+    <input type="number" id="number" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+    <br><br>
+    <table id="table"></table>
+</body>
+</html>
